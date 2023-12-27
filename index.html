@@ -20,9 +20,10 @@
         };
 
         function sendMessage() {
+            const time = new Date().toLocaleTimeString();
             const User = document.getElementById("messageInput2").value;
             const messageInput = document.getElementById("messageInput");
-            const message = User+":"+messageInput.value;
+            const message = User+" said "+messageInput.value + " at "+time;
             socket.send(message);
             messageInput.value = "";
         }
