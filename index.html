@@ -6,7 +6,8 @@
     <title>WebSocket Client</title>
 </head>
 <body>
-    <input type="text" id="messageInput" placeholder="Type a message(Put username at start)">
+    <input type="text" id="messageInput2" placeholder="Username">
+    <input type="text" id="messageInput" placeholder="Type a message">
     <button onclick="sendMessage()">Send</button>
     <div id="output"></div>
 
@@ -19,8 +20,9 @@
         };
 
         function sendMessage() {
+            const User = document.getElementById("messageInput2").value;
             const messageInput = document.getElementById("messageInput");
-            const message = messageInput.value;
+            const message = User+messageInput.value;
             socket.send(message);
             messageInput.value = "";
         }
