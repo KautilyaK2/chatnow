@@ -22,7 +22,7 @@
         function sendMessage() {
             const User = document.getElementById("messageInput2").value;
             const messageInput = document.getElementById("messageInput");
-            const message = User+messageInput.value;
+            const message = User+":"+messageInput.value;
             socket.send(message);
             messageInput.value = "";
         }
