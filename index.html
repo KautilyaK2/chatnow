@@ -11,7 +11,7 @@
     <div id="output"></div>
 
     <script>
-        const socket = new WebSocket("ws://localhost:8765");
+        const socket = new WebSocket("ws://localhost:8000");
 
         socket.onmessage = (event) => {
             const output = document.getElementById("output");
